@@ -1,0 +1,33 @@
+name: spotter-routing-api
+region: nyc
+services:
+  - name: api
+    source_dir: backend
+    dockerfile_path: backend/Dockerfile
+    github:
+      repo: REPLACE_OWNER/REPLACE_REPOSITORY
+      branch: main
+      deploy_on_push: true
+    http_port: 8080
+    instance_count: 1
+    instance_size_slug: basic-xxs
+    health_check:
+      http_path: /api/health/
+    envs:
+      - key: ENVIRONMENT
+        value: production
+      - key: DEBUG
+        value: "false"
+      - key: ALLOWED_HOSTS
+        value: ${APP_DOMAIN}
+      - key: CORS_ALLOWED_ORIGINS
+        value: https://REPLACE_FRONTEND.vercel.app
+      - key: DJANGO_SECRET_KEY
+        type: SECRET
+        value: REPLACE_IN_DIGITALOCEAN
+      - key: ORS_API_KEY
+        type: SECRET
+        value: REPLACE_IN_DIGITALOCEAN
+      - key: GEOAPIFY_API_KEY
+        type: SECRET
+        value: REPLACE_IN_DIGITALOCEAN

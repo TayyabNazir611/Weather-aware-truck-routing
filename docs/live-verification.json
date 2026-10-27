@@ -1,0 +1,13 @@
+{
+  "status": 200,
+  "routes": 3,
+  "checkpointCounts": [
+    6,
+    6,
+    6
+  ],
+  "recommended": "r3",
+  "warnings": [],
+  "browserErrors": [],
+  "forecastFrames": 49
+}

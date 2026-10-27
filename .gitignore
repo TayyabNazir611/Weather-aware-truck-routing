@@ -1,0 +1,16 @@
+.env
+.env.*
+!.env.example
+env.txt
+.venv/
+.venv312/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+node_modules/
+dist/
+test-results/
+playwright-report/
+tmp/
+*.sqlite3
+*.tsbuildinfo
