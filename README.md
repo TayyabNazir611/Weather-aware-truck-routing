@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Spotter — weather-aware truck routing
 
 Compare genuine truck routes using the weather expected **when the truck reaches each checkpoint**. A separate corridor overlay explores the next 48 forecast hours without changing the trip recommendation.
@@ -124,3 +125,6 @@ Local Playwright uses installed Chrome. CI installs Chromium and mocks external 
 ## Practical limits
 
 Truck profiles use provider defaults; cargo weight is not gross vehicle weight, axle load, dimensions or clearance. Verify legal restrictions separately. Driving ETAs omit driver rest stops and real-time traffic. Search is US-scoped. Route alternatives are never guaranteed: the tested Chicago–Merrillville corridor yields three, while Chicago–Indianapolis yields two. Forecasts cover seven days and departures are limited to five; later arrivals can become Unknown. Sampling can miss localized hazards. Free providers have quotas and no guaranteed availability. In-memory caching/throttling is per process; use a shared cache before scaling to multiple workers or instances. The free Open-Meteo service is for noncommercial evaluation; commercial usage needs a suitable plan.
+=======
+# Weather-aware-truck-routing
+>>>>>>> 00d0a1a01bbbdfec1f5cde9c08e838116890f3b2
