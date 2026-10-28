@@ -1,5 +1,5 @@
 import type { Analysis, Location, Trip } from './types'
-const base = (import.meta.env.VITE_API_BASE_URL || 'https://backend-seven-snowy-36.vercel.app/').replace(/\/$/, '')
+const base = (import.meta.env.VITE_API_BASE_URL || '').replace(/\/$/, '')
 async function request<T>(path: string, options: RequestInit = {}): Promise<T> {
   const response = await fetch(`${base}/api/${path}`, options)
   const data = await response.json().catch(() => null)
